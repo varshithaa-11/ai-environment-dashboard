@@ -1,5 +1,5 @@
 streamlit
 requests
-anthropic
 python-dotenv
 plotly
+groq
