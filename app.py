@@ -7,8 +7,8 @@ from groq import Groq
 
 # Load API keys
 load_dotenv()
-WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+WEATHER_API_KEY = os.getenv("WEATHER_API_KEY") or st.secrets.get("WEATHER_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY")
 
 # Configure Groq
 groq_client = Groq(api_key=GROQ_API_KEY)
